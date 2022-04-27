@@ -1,0 +1,1081 @@
+/* letra */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    index                                   */
+/* -------------------------------------------------------------------------- */
+
+/* body */
+.layout{
+    background-color: #FFF7BC;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+/* fin body */
+
+/* header */
+
+.header{
+    /* grid */
+    grid-area: header;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1 ;
+    background: linear-gradient(180deg, rgba(253,93,93,0.950315160243785) 32%, rgba(255,128,128,0.8410714627647934) 86%, rgba(255,247,188,0) 100%);    
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* logo box */
+.logo{
+    display: flex;
+    width: 100%;
+}
+/* concordia logo y nombre */
+.logo-a{
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1% 0% 1% 5% ;
+}
+.logo--img{
+    display: inline-block;
+    width: 14%;
+}
+
+.logo--h1{
+    display: inline-block;
+    color: white;
+}
+.logo--h1:hover{
+    color: #C0EDA6;
+    transition: 1s;
+}
+/* fin logo y nombre */
+
+/* navegacion */
+.header nav{
+    display: flex;
+    grid-column-start: span 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu--items{
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.header nav .menu .menu--items a{
+    text-decoration: NONE;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.717);
+}
+.header nav .menu .menu--items a:hover{
+    text-shadow: none;
+    transition: 1s;
+}
+
+.items--titulos{
+    color: white;
+}
+.items--titulos:hover{
+    color: #C0EDA6;
+    transition: 1s;
+
+}
+/* fin navegacion */
+
+/* fin header */
+
+/* main */
+
+main{
+    background-color: #FFF7BC;
+    grid-area: main;
+    padding: 0% 1% 1% 1%;
+}
+
+/* seccion inicio pag */
+
+/* foto principal y frase */
+
+.inicio{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.491), rgba(0, 0, 0, 0.5)), url(img/costanera-2.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+/*  */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    
+}
+
+.inicio h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.518);
+}
+.inicio p{
+    font-size: 30px;
+}
+/* fin foto principal y frase */
+
+/* por que visitarnos */
+.presentacion{
+    background: linear-gradient(180deg, rgba(255,128,128,1) 83%, rgba(255,247,188,1) 100%);
+    
+    align-items: center;
+    padding: 2%;
+}
+.presentacion--titulo{
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 200%;
+    padding: 2%;
+}
+
+.presentacion--texto{
+    display: inline-block;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: 100;
+    margin: 2% 10% 2% 10%;
+}
+/* fin por que visitarnos */
+
+/* fin seccion inicio pag */
+
+/* playas de concordia */
+/* entrada playa */
+.playa{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 300px 300px;
+    grid-template-areas: 
+            " fot1 fot3 fot3"
+            " fot2 fot3 fot3";
+    margin-top: 2%;
+    margin-bottom: 2%;
+    gap: 15px;
+}
+
+.playa--entrada{
+    position: relative;
+    grid-area: fot1;
+    margin-left: 20% ;
+}
+.entrada--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.entrada--tit{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(250, 128, 114, 0.767);
+    width: 100%;
+    padding: 5px 0;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+/* fin entrada playa */
+
+/* playa maria */
+.playa--maria{
+    position: relative;
+    grid-area: fot2;
+    margin-left: 2%;
+}
+.maria--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.maria--tit{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(250, 128, 114, 0.767);
+    width: 100%;
+    padding: 5px 0;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+/* fin playa maria */
+
+/* barco en rio */
+.playa--barcoRio{
+    position: relative;
+    grid-area: fot3;
+}
+.barcoRio--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.barcoRio--tit{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(250, 128, 114, 0.767);
+    width: 100%;
+    padding: 5px 0;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+/* fin barco en rio */
+
+
+/* fin playas de concordia */
+
+/* interes */
+
+.interes{
+    display: grid;
+    grid-template-columns: repeat(2,1r);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+                        "turismo carnavales"
+                        "festividades festividades";
+    width: 100%;
+    margin-top: 1%;
+    gap: 2%;
+}
+
+/* article Turismo */
+.turismo{
+    grid-area: turismo;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px 200px;
+    grid-template-areas: 
+        "t1 t2"
+        "t1 t3";
+    background-color: #FF8080;
+    padding: 2%;
+    
+}
+
+/* contenedores */
+.turismo div{
+    display: flex;
+    padding: 2%;
+}
+.sanca-index{
+    position: relative;
+    grid-area: t1;
+    align-items: center;
+}   
+/* imagen */
+.turismo--sanCa{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.represa-index{
+    position: relative;
+    grid-area: t2;
+    align-items: center;
+}
+.turismo--represa{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.termas-index{
+    position: relative;
+    grid-area: t3;
+    align-items: center;
+}
+.turismo--termas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* titulos */
+.interes--titulo{
+    position: absolute;
+    top: 5%;
+    padding: 1%;
+    color: rgb(6, 4, 4);
+    background-color: #fff7bce1;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+/* fin art turismo */
+
+/* article Carnavales */
+.carnavales{
+    grid-area: carnavales;
+    display: flex;
+    background-color: #FF8080;
+    padding: 2%;
+}
+.carnavales div{
+    display: flex;
+}
+
+.carnavales-1{
+    position: relative;
+    width: 100%;
+}
+.carnavales--pasarella{
+    width: 100%;
+    height: 90%;
+}
+
+.carnavales-2{
+    position: absolute;
+    width: 20%;
+    bottom: 0%;
+    right: 25%;
+}
+.carnavales--carroza{
+    bottom: 2%;
+    right: 5%;
+    width: 100%;
+}
+
+.carnavales-3{
+    position: absolute;
+    width: 20%;
+    bottom: 0%;
+    right: 2%;
+}
+.carnavales--murga{
+    right: 30%;
+    width: 100%;
+}
+/* fin art carnavales */
+
+/* article festivales */
+.festivales{
+    grid-area: festividades;
+    background-color: salmon;
+    width: 90%;
+    margin: auto;
+    padding: 1%;
+    overflow: hidden;
+}
+
+.festivales h3{
+    padding: 1%;
+    color: rgb(6, 4, 4);
+    background-color: #fff7bce1;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+
+.carrusel li{
+    list-style: none;
+    width: 100%;
+}
+
+.img-carrusel{
+    width: 100%;
+}
+
+.carrusel{
+    display: flex;
+    padding: 0;
+    width: 450%;
+    animation: carrusel 50s linear infinite alternate;
+}
+
+@keyframes carrusel{
+    /*  */
+    0%{ margin-left: 0;}
+    10%{ margin-left: 0;}
+    /*  */
+    15%{ margin-left: -50;}
+    25%{ margin-left: -50;}
+    /*  */
+    30%{ margin-left: -100%;}
+    35%{ margin-left: -100%;}
+    /*  */
+    40%{ margin-left: -150%;}
+    50%{ margin-left: -150%;}
+
+    /*  */
+    55%{ margin-left: -200%;}
+    65%{ margin-left: -200%;}
+    /*  */
+    70%{ margin-left: -250%;}
+    80%{ margin-left: -250%;}
+    /*  */
+    85%{ margin-left: -300%;}
+    95%{ margin-left: -300%;}
+
+    96%{ margin-left: -350;}
+    100%{ margin-left: -350%;}
+}
+
+
+/* fin article festivales */
+/* fin interes */
+
+/* fin main */
+
+/* footer */
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(192,237,166);
+    background: linear-gradient(0deg, rgba(192,237,166,1) 82%, rgba(255,247,188,1) 98%);    width: 100%;
+    padding: 1%;
+}
+/* logo y frase */
+.logo--container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 33.3%;
+}
+
+.logo--container a{
+    display: flex;
+    text-decoration: none;
+}
+
+.footer--logo{
+    display: inline;
+    width: 100%;
+    height: 100%;
+}
+
+.footer--nom{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: 1s;
+
+}
+.footer--nom:hover{
+    color: #FD5D5D;
+    transition: 1s;
+    font-size: 160%;
+    font-style: italic;
+}
+.footer--frase{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: 1s;
+
+}
+.footer--frase:hover{
+    color: #FD5D5D;
+    transition: 1s;
+    font-size: 120%;
+    font-style: italic;
+
+}
+/* fin logo y frase */
+
+/* iconos de redes */
+.redes-container{
+    display: flex;
+    width: 33.3%;
+    justify-content: center;
+    align-items: center;
+}
+.redes{
+    display: inline-block;
+    margin: 2%;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+    transition: 1s;
+
+}
+.redes:hover{
+    color: #FD5D5D;
+    font-size: 250%;
+    transition: 1s;
+}
+/* fin iconos de redes */
+
+/* derechos de autor */
+.derchautor{
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; */
+    color: aliceblue;
+    font-size: 50%;
+    text-align: end;
+    transition: 2s;
+
+}
+.derchautor:hover{
+    color: #FD5D5D;
+    font-size: 100%;
+    text-align: center;
+    transition: 2s;
+}
+/* fin derechos de autor */
+/* fin footer */
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  fin index                                 */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Turismo                                  */
+/* -------------------------------------------------------------------------- */
+/* main turismo */
+
+/* presentacion */
+.t-lugares{
+    background-color: #FF8080;
+    background: linear-gradient(180deg, rgba(255,128,128,1) 83%, rgba(255,247,188,1) 100%);
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1%;
+}
+.p-titulo{
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+.p-tit{
+    text-align: center;
+    margin: auto;
+    color: black;
+    font-size: 400%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.t-texto{
+    display: flex;
+
+    margin: 2% 20% 2% 20%;
+    font-size: 150%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.t-texto p{
+    text-align: justify;
+}
+
+
+/* secciones de los lugares */
+.lugares{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);;
+}
+/*  */
+.t-secciones{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.t-secciones-2{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+/* imagenes */
+.t-img-left{
+    width: 50%;
+}
+
+.t-img-right{
+    width: 50%;
+}
+.t-imgenes{
+    width: 100%;
+}
+/* textos de las imagenes */
+.t-txt{
+    display: flex;
+    width: 30%;
+    text-align: center;
+    align-items: center;
+    color: black;
+    position: absolute;
+    right: 25%;
+    top: 20%;
+}
+.t-txt-2{
+    display: flex;
+    width: 30%;
+    text-align: center;
+    align-items: center;
+    color: black;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+}
+
+.t-txt p{
+    font-size: 110%;
+    background-color: #FF8080;
+    padding: 1%;
+}
+.t-txt-2 p{
+    font-size: 110%;
+    background-color: #FF8080;
+    padding: 1%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 fin Turismo                                */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                   Fiestas                                  */
+/* -------------------------------------------------------------------------- */
+
+/* carnavales */
+.seccion-carnaval{
+    width: 100%;
+}
+
+.pasarella{
+    display: inline-block;
+    width: 60%;
+}
+
+.f-pasarella_tit{
+    display: inline-block;
+    background-color: salmon;
+    color: black;
+    font-size: 150%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.f-pasarella_img{
+    display: inline-block;
+    width: 100%;
+}
+
+.f-texto{
+    display: inline-block;
+    width: 20%;
+    color: black;
+    background-color: salmon;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.murgaYcarroza{
+    display: inline-block;
+    width: 60%;
+}
+.myc{
+    display: inline-block;
+    width: 40%;
+    margin: 0 4% 0 4%;
+}
+.myc-img{
+    width: 100%;
+}
+.myc-txt{
+    color: black;
+    background-color: salmon;
+    font-size: 150%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* festividades */
+.seccion-festividades{
+    width: 100%;
+    margin-top: 1% ;
+}
+
+.f-festividades{
+    width: 100%;
+    margin: 1% 2% 1% 2%;
+}
+.fest-descripcion{
+    display: inline-block;
+    width: 40%;
+    padding: 0% 2% 0% 2%;
+    text-align: center;
+}
+.fest-tit{
+    color: black;
+    font-size: 200%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fest-txt{
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fest-img{
+    display: inline-block;
+    width: 30%;
+}
+.fest-img_tamaño{
+    width: 100%;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 fin Fiestas                                */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    Mapa                                    */
+/* -------------------------------------------------------------------------- */
+/* mapa */
+.mapa{
+    width: 100%;
+}
+.mapa-google{
+    width: 100%;
+    height: 500px;
+}
+/* indicaciones */
+.indicaciones{
+    margin: 2% 2% 2% 2%;
+    width: 100%;
+}
+/* img */
+.indicaciones-img{
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+}
+.img-provincia{
+    width: 90%;
+}
+/* texto */
+.indicaciones-txt{
+    display: inline-block;
+    width: 40%;
+    padding: 1% 2% 1% 2%;
+    text-align: center;
+    background-color: salmon;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 150%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  fin mapa                                  */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                  Historia                                  */
+/* -------------------------------------------------------------------------- */
+/* bandera superior e inferior */
+.bandera{
+    width: 100%;
+}
+.bandera-img{
+    width: 100%;
+}
+/* historia */
+.historia{
+    width: 100%;
+}
+.historia-art{
+    width: 100%;
+}
+.historia-part{
+    display: inline-block;
+    border-radius: 20%;
+    background-color: salmon;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+}
+.historia-img{
+    display: inline-block;
+    width: 30%;
+    padding: 2% 2% 1% 2%;
+}
+.historia-txt{
+    display: inline-block;
+    width: 40%;
+    padding: 3% 2% 3% 2%;
+    text-align: center;
+    color: black;
+}
+/* escarapela */
+.escarapela{
+    display: inline-block;
+    width: 19%;
+}
+.escarapela-img{
+    width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                fin historia                                */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 responsive                                 */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                   mobile                                   */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (min-width:360px) and (max-width: 451px) {
+    .header{
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    .menu{
+        padding-bottom: 10%;
+        margin-left: 10%;
+        flex-direction: column;
+    }
+    .inicio h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .inicio p{
+        font-size: 20px;
+    }
+    .playa{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+                "fot1"
+                "fot3"
+                "fot2";
+    }
+    .interes{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+                "turismo"
+                "carnavales"
+                "festividades";
+        margin-bottom: 1%;
+    }
+    .carnavales-1{
+        padding: 5%;
+    }
+    .carnavales-3{
+        width: 25%;
+    }
+    .carnavales-2{
+        right: 30%;
+        width: 25%;
+    }
+    .festivales{
+        margin-bottom: 5%;
+    }
+
+    .footer{
+        padding: 3%;
+        flex-direction: column;
+    }
+    .logo--container,.redes-container,.derchautor{
+        width: 100%;
+    }
+    .t-secciones{
+        flex-direction: column;
+        width: 100%;
+        position: static;
+        padding: 1%;
+    }
+    .t-secciones-2{
+        flex-direction: column-reverse;
+        width: 100%;
+        position: static;
+        padding: 1%;
+
+    }
+    .t-txt,.t-txt-2{
+        position: static;
+        width: 100%;
+    }
+    
+    .t-img-left,.t-img-right{
+        width: 100%;
+    }
+    .t-txt p,.t-txt-2 p{
+        font-size: 90%;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   tablet                                   */
+/* -------------------------------------------------------------------------- */
+
+@media  only screen and (min-width: 451px) and (max-width:960px) {
+    .header{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "logo nav nav";
+        flex-wrap: wrap;
+
+    }
+    .logo{
+        grid-area: logo;
+        width: 50%;
+    }
+    .logo--img{
+        width: 80%;
+    }
+    .logo--h1{
+        font-size: 90%;
+    }
+
+    nav{
+        width: 100%;
+        grid-area: nav;
+        justify-content: center;
+    }
+    .menu{
+        width: 100%;
+        justify-content: space-around;
+
+    }
+    .menu--items{
+        font-size: 50%;
+    }
+    .inicio h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .inicio p{
+        font-size: 20px;
+    }
+    .playa{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+                "fot1 fot3"
+                "fot2 fot3";
+    }
+    .entrada--tit,.maria--tit{
+        font-size: 60%;
+    }
+    .interes{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+                "turismo"
+                "carnavales"
+                "festividades";
+        margin-bottom: 1%;
+    }
+    .carnavales-1{
+        padding: 5%;
+    }
+    .carnavales-3{
+        width: 25%;
+    }
+    .carnavales-2{
+        right: 30%;
+        width: 25%;
+    }
+    .festivales{
+        margin-bottom: 5%;
+    }
+
+    .footer{
+        padding: 3%;
+        flex-direction: column;
+    }
+    .logo--container,.redes-container,.derchautor{
+        width: 100%;
+    }
+    .t-secciones{
+        flex-direction: column;
+        width: 100%;
+        position: static;
+        padding: 1%;
+    }
+    .t-secciones-2{
+        flex-direction: column-reverse;
+        width: 100%;
+        position: static;
+        padding: 1%;
+
+    }
+    .t-txt,.t-txt-2{
+        position: static;
+        width: 100%;
+    }
+    
+    .t-img-left,.t-img-right{
+        width: 100%;
+    }
+    .t-txt p,.t-txt-2 p{
+        font-size: 90%;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   desktop                                  */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 961px) {
+    .t-secciones,.t-secciones-2{
+        position: static;
+    }
+    
+    .t-txt,.t-txt-2{
+        position: static;
+        width: 50%;
+    }
+    
+}
