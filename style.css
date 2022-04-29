@@ -686,83 +686,121 @@ main{
 /* -------------------------------------------------------------------------- */
 
 /* carnavales */
-.seccion-carnaval{
+.fiestas--titulo{
     width: 100%;
+    height: 20vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.491), rgba(0, 0, 0, 0.5)), url(img/98.webp) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+/*  */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.fiestas--titulo h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.518);
+}
+
+.seccion-carnaval{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+            "pasarella pasarella ftexto";
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .pasarella{
-    display: inline-block;
-    width: 60%;
+    grid-area: pasarella;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20%;
 }
 
 .f-pasarella_tit{
-    display: inline-block;
-    background-color: salmon;
+    background-color: #FF8080;
     color: black;
     font-size: 150%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    font-weight: bold;
 }
 .f-pasarella_img{
-    display: inline-block;
     width: 100%;
 }
-
-.f-texto{
-    display: inline-block;
-    width: 20%;
-    color: black;
-    background-color: salmon;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .murgaYcarroza{
-    display: inline-block;
-    width: 60%;
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 .myc{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: 40%;
-    margin: 0 4% 0 4%;
 }
 .myc-img{
     width: 100%;
 }
 .myc-txt{
     color: black;
-    background-color: salmon;
+    background-color: #FF8080;
     font-size: 150%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.f-texto{
+    grid-area: ftexto;
+    display: flex;
+    width: 100%;
+    color: black;
+    background-color: #FF8080;
+    padding: 5%;
+    text-align: center;
+    font-size: 150%;
 }
 
 /* festividades */
 .seccion-festividades{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
     width: 100%;
-    margin-top: 1% ;
+    margin-top: 2%;
+
 }
 
 .f-festividades{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    margin: 1% 2% 1% 2%;
+    margin-top: 2%;
+
 }
 .fest-descripcion{
-    display: inline-block;
     width: 40%;
-    padding: 0% 2% 0% 2%;
     text-align: center;
 }
 .fest-tit{
     color: black;
     font-size: 200%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .fest-txt{
     color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 110%;
 }
 .fest-img{
-    display: inline-block;
-    width: 30%;
+    width: 40%;
 }
 .fest-img_tamaño{
     width: 100%;
@@ -777,6 +815,7 @@ main{
 /* -------------------------------------------------------------------------- */
 /* mapa */
 .mapa{
+    background-color: #FF8080;
     width: 100%;
 }
 .mapa-google{
@@ -785,17 +824,20 @@ main{
 }
 /* indicaciones */
 .indicaciones{
-    margin: 2% 2% 2% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
     width: 100%;
 }
 /* img */
 .indicaciones-img{
     display: inline-block;
-    width: 40%;
-    text-align: center;
+    width: 50%;
 }
 .img-provincia{
-    width: 90%;
+    background-color: #FF8080;
+    width: 100%;
 }
 /* texto */
 .indicaciones-txt{
@@ -803,7 +845,7 @@ main{
     width: 40%;
     padding: 1% 2% 1% 2%;
     text-align: center;
-    background-color: salmon;
+    background-color: #FF8080;
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 150%;
@@ -818,30 +860,68 @@ main{
 /* -------------------------------------------------------------------------- */
 /* bandera superior e inferior */
 .bandera{
+    display: flex;
+    justify-content: center;
+    position: relative;
     width: 100%;
+    color: #fff;
+}
+.bandera h1{
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.518);
 }
 .bandera-img{
     width: 100%;
 }
 /* historia */
 .historia{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     width: 100%;
+    background: rgb(224,0,26);
+    background: linear-gradient(0deg, rgba(224,0,26,1) 25%, rgba(2,84,46,1) 75%);
+    margin-top: -4%;
+    margin-bottom: -4%;
+
 }
 .historia-art{
+    display: flex;
     width: 100%;
+    position: relative;
 }
+/* .bg-color1{
+    background-color: #02542e;
+}
+.bg-color2{
+    background: rgb(224,0,26);
+    background: linear-gradient(0deg, rgba(224,0,26,1) 25%, rgba(2,84,46,1) 75%);
+}
+.bg-color3{
+    background-color: #e0001a;
+} */
 .historia-part{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20%;
     background-color: salmon;
-    width: 40%;
-    height: 100%;
+    width: 50%;
     text-align: center;
+    z-index: 2;
+}
+
+.img-catedral{
+    width: 30%;
+    padding: 2%;
 }
 .historia-img{
     display: inline-block;
-    width: 30%;
-    padding: 2% 2% 1% 2%;
+    width: 50%;
+    padding: 2%;
+
 }
 .historia-txt{
     display: inline-block;
@@ -853,6 +933,10 @@ main{
 /* escarapela */
 .escarapela{
     display: inline-block;
+    position: absolute;
+    z-index: 1;
+    top: -45%;
+    left: 40.5%;
     width: 19%;
 }
 .escarapela-img{
