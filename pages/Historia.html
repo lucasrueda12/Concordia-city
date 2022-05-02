@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/91ef4bb955.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
+    <!-- animacion AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- icono -->
     <link rel="shortcut icon" href="../img/IconoParaPagina.ico" type="image/x-icon">
     <!-- titulo -->
@@ -58,16 +60,13 @@
             <!-- art 1 -->
             <article class="historia-art">
                 <!-- catedral -->
-                <div class="historia-part">
+                <div data-aos="fade-up" class="historia-part">
                     <img src="../img/octubre145 Catedral.jpg" alt="catedral" class="img-catedral">
                     <p class="historia-txt">La palabra Concordia significa acuerdo, armonía, conformidad, unión de corazones (con cordis). Surgió como nombre de una población, corolario feliz de una larga etapa de desencuentros entre los entrerrianos sucedida entre 1825 y 1831 conocida como anarquía entrerriana.</p>
                 </div>
                 <!-- escarapela -->
-                <!-- <div class="escarapela">
-                    <img src="../img/escarapelaConc.png" alt="escarapela" class="escarapela-img">
-                </div> -->
                 <!-- centro -->
-                <div class="historia-part">
+                <div data-aos="fade-down" class="historia-part">
                     <p class="historia-txt">Con el propósito de terminar con ese terrible momento, el Coronel Pedro Espino, gobernador producto de la misma anarquía como tantos otros, decidió convocar una asamblea extraordinaria que tuviese más fuerza que la débil legislatura de ese entonces, compuesta de 5 diputados y un secretario. Fue así que, representando a los distintos Departamentos Subalternos en que se dividía la Provincia, concurrieron los diputados elegidos para integrar esa asamblea que entró en funciones a mediados de 1831.</p>
                     <img src="../img/12771_440115532703402_396327418_n_0.jpg" alt="centro" class="historia-img">
                 </div>
@@ -75,7 +74,7 @@
             <!-- art 2 -->
             <article class="historia-art">
                 <!-- vista aerea -->
-                <div class="historia-part">
+                <div data-aos="fade-down" class="historia-part">
                     <img src="../img/vistaerea.jpg" alt="catedral" class="historia-img">
                     <p class="historia-txt">Toda nuestra región, actuales Departamentos de Concordia, Federación, Federal y una parte de Feliciano, estaba comprendida en el Departamento Subalterno de Mandisoví. Como diputado fue elegido el Padre Mariano José del Castillo, párroco de Mandisoví, única población existente en el noreste entrerriano.
                         La asamblea Extraordinaria se reunió en Paraná, llenó su cometido mediante una serie de medidas a fin de tranquilizar los espíritus y las armas de los grupos que se disputaban el poder por medio de luchas largas y estériles.</p>
@@ -85,15 +84,15 @@
                     <img src="../img/escarapelaConc.png" alt="escarapela" class="escarapela-img">
                 </div>
                 <!-- estacion de tren -->
-                <div class="historia-part">
+                <div data-aos="fade-up" class="historia-part">
                     <p class="historia-txt">El 21 de noviembre de 1831 finalizó sus sesiones la magna asamblea. Lo hizo con una nota a la Legislatura, inspirada por el P. del Castillo, donde se solicitaba que se mandase a fundar una villa en el Rincón del Salto (territorio entre el Ayuí y el Yuquerí) que llevase por nombre Concordia para perpetuar en el recuerdo la lograda unión y entendimiento de los entrerrianos.</p>
                     <img src="../img/F_Tiro-Fed.jpg" alt="centro" class="historia-img">
                 </div>
             </article>
             <!-- art 3 -->
-            <article class="historia-art">
+            <article  class="historia-art">
                 <!-- principito -->
-                <div class="historia-part">
+                <div data-aos="fade-up" class="historia-part">
                     <img src="../img/RL7AYYOZOZCJZOX5K6ACH5B76U.webp" alt="catedral" class="historia-img">
                     <p class="historia-txt">Así, la Legislatura sancionó el decreto de fundación el 29 noviembre de 1831 el que recién se puso en práctica en 1832 cuando fue nombrado el mismo P. del Castillo, como "Sujeto Inteligente", comisionado para la fundación material. A del Castillo le toco elegir el lugar, realizar mediciones, establecer el formato urbano con manzanas, solares, sitios y calles y, además, establecer los primeros pobladores.</p>
                 </div>
@@ -102,7 +101,7 @@
                     <img src="../img/escarapelaConc.png" alt="escarapela" class="escarapela-img">
                 </div>
                 <!-- centro -->
-                <div class="historia-part">
+                <div data-aos="fade-down" class="historia-part">
                     <p class="historia-txt">Concordia despaciosamente fue afirmándose por el empeño y tesón de su población. Era su pequeña pero entusiasta actividad comercial la que le daba vida, aunque también contribuía la primera industria concordiense: el saladero de Duarte Manzores, establecido en 1836. A su vez, los comandantes tomaban medidas para la seguridad como el abasto, la apertura de calles, las concesiones de sitios, acciones concretas contra las epidemias, especialmente la viruela, verdadero azote en la Concordia inicial.</p>
                     <img src="../img/saltogrande.jpg" alt="centro" class="historia-img">
                 </div>
@@ -144,5 +143,11 @@
     <!-- Fin footer -->
     </div>
     <!-- fin layout -->
+    <!-- SCRIPT AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- fin AOS -->
 </body>
 </html>

@@ -802,6 +802,13 @@ main{
 .fest-descripcion{
     width: 40%;
     text-align: center;
+    transition: 0.5s;
+}
+.fest-descripcion:hover{
+    transition: 0.5s;
+    background-color: #FF8080;
+    transform: scale(1.2);
+
 }
 .fest-tit{
     color: black;
