@@ -8,6 +8,13 @@
     <script src="https://kit.fontawesome.com/91ef4bb955.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
+    <!-- animate -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- animacion AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- icono -->
     <link rel="shortcut icon" href="../img/IconoParaPagina.ico" type="image/x-icon">
     <!-- titulo -->
@@ -51,7 +58,7 @@
     <main class="main">
 
         <!-- vista titulo y parrafo -->
-        <section class="t-lugares">
+        <section data-aos="fade-up" class="t-lugares">
             <!-- titulo principal -->
             <article class="p-titulo">
                 <h1 class="p-tit">Lugares para conocer</h1>
@@ -163,5 +170,11 @@
     <!-- Fin footer -->
     </div>
     <!-- fin layout -->
+    <!-- SCRIPT AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- fin AOS -->
 </body>
 </html>

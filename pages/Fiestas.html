@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/91ef4bb955.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
+    <!-- animacion AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- icono -->
     <link rel="shortcut icon" href="../img/IconoParaPagina.ico" type="image/x-icon">
     <!-- titulo -->
@@ -64,12 +66,12 @@
                     <!-- imgs secundarias -->
                     <article class="murgaYcarroza">
                         <!-- murga -->
-                        <div class="myc">
+                        <div data-aos="zoom-in" class="myc">
                             <img src="../img/murga2.jpg" alt="murga" class="myc-img">
                             <h3 class="myc-txt">Las comparsas compiten por ser la mejor de todas</h3>
                         </div>
                         <!-- carroza -->
-                        <div class="myc">
+                        <div data-aos="zoom-in" class="myc">
                             <img src="../img/emperatriz.jpg" alt="carroza" class="myc-img">
                             <h3 class="myc-txt">Carrozas al puro estilo de Concordia</h3>
                         </div>
@@ -165,5 +167,11 @@
     <!-- Fin footer -->
     </div>
     <!-- fin layout -->
+    <!-- SCRIPT AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- fin AOS -->
 </body>
 </html>

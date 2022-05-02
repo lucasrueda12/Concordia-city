@@ -10,6 +10,13 @@
     <link rel="shortcut icon" href="img/IconoParaPagina.ico" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- animate -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- animacion AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- titulo -->
     <title>Concordia</title>
 </head>
@@ -57,9 +64,9 @@
         <!-- seccion inicio de la pagina -->
         <section class="seccion--inicio">
             <!-- imagen principal y frase -->
-            <article class=" inicio">
-                <h1>Una ciudad para recuperar la paz y disfrutar</h1>
-                <p>Estas listo para las mejores vacaciones?</p>
+            <article class="inicio">
+                <h1 class="animate__animated animate__backInLeft">Una ciudad para recuperar la paz y disfrutar</h1>
+                <p class="animate__animated animate__backInRight">Estas listo para las mejores vacaciones?</p>
             </article>
             <!-- Por que visitar nuestra ciudad -->
             <article class="presentacion">
@@ -93,7 +100,7 @@
         <!-- interes-->
         <section class="interes">
             <!-- Lugares turisticos. Img de San carlos, represa y termas, con sus respectivos titulos -->
-            <article class="turismo">
+            <article data-aos="zoom-in-down" class="turismo">
                 <div class="sanca-index">
                     <h3 class="interes--titulo">Castillo San Carlos</h3>
                     <img src="img/portfolio-1.jpg" alt="San carlos" class="turismo--sanCa">
@@ -107,9 +114,9 @@
                     <img src="img/ARCHI_810402.jpg" alt="Termas" class="turismo--termas">
                 </div>
             </article>
-            <!-- fin lugares turisticos -->
+            <!-- fin lugares turisticos --> 
             <!-- Carnavales -->
-            <article class="carnavales"> 
+            <article data-aos="zoom-in-up" class="carnavales"> 
                 <!-- pre-visualizacion de Carnavales. img de estacion norte en la fiesta del Carnaval y algunas caracteristicas -->
                 <div class="carnavales-1">
                     <h3 class="interes--titulo">CARNAVALES</h3>
@@ -193,6 +200,12 @@
     </div>
     <!-- fin layout -->
 
+    <!-- SCRIPT AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- fin AOS -->
 </body>
 
 </html>

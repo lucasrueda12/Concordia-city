@@ -636,13 +636,23 @@ main{
 /* imagenes */
 .t-img-left{
     width: 50%;
+    overflow: hidden;
 }
 
 .t-img-right{
     width: 50%;
+    overflow: hidden;
+
 }
 .t-imgenes{
     width: 100%;
+    transition: 0.5s;
+    object-fit: cover;
+}
+/* transiciones */
+.t-imgenes:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
 }
 /* textos de las imagenes */
 .t-txt{
@@ -766,6 +776,9 @@ main{
     /* background-color: #FF8080; */
     text-align: center;
     font-size: 150%;
+}
+.f-texto p{
+    background-color: #FF8080;
 }
 
 /* festividades */
