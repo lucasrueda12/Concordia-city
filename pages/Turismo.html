@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- iconos de redes -->
     <script src="https://kit.fontawesome.com/91ef4bb955.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
     <!-- animate -->
@@ -25,31 +27,39 @@
     <!-- loyaut -->
     <div class="layout">
     <!-- header -->
-    <header class="header">
-        <!-- logo con vinculo al index -->
-        <div class="logo">
-            <a href="../index.html" class="logo-a"><img src="../img/IconoParaPagina.png" alt="IconoParaPagina" class="logo--img" ><h1 class="logo--h1">CONCORDIA</h1></a>
-        </div>
+    <header>
         <!-- menu -->
-        <nav>
-            <!-- opciones -->
-            <ul class="menu">
-                <li class="menu--items">
-                    <a href="../index.html" ><h2 class="items--titulos">Inicio</h2></a>
-                </li>
-                <li class="menu--items">
-                    <a href="Turismo.html" ><h2 class="items--titulos">Turismo</h2></a>
-                </li>
-                <li class="menu--items">
-                    <a href="Fiestas.html" ><h2 class="items--titulos">Fiestas</h2></a>
-                </li>
-                <li class="menu--items">
-                    <a href="Mapa.html" ><h2 class="items--titulos">Mapa</h2></a>
-                </li>
-                <li class="menu--items">
-                    <a href="Historia.html" ><h2 class="items--titulos">Historia</h2></a>
-                </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light background-nav">
+            <div class="container-fluid">
+                <!-- logo -->
+                <a class="navbar-brand d-flex justify-content-center" href="../index.html">
+                    <img src="../img/IconoParaPagina.png" alt="IconoParaPagina" class="logo--img" >
+                    <h2 class="logo--h2">CONCORDIA</h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- opciones -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav justify-content-between">
+                        <li class="nav-item opcion-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html"><h2 class="items--titulos">Inicio</h2></a>
+                        </li>
+                        <li class="nav-item opcion-item">
+                            <a class="nav-link" href="../pages/Turismo.html"><h2 class="items--titulos">Turismo</h2></a>
+                        </li>
+                        <li class="nav-item opcion-item">
+                            <a class="nav-link" href="../pages/Fiestas.html"><h2 class="items--titulos">Fiestas</h2></a>
+                        </li>
+                        <li class="nav-item opcion-item">
+                            <a class="nav-link" href="../pages/Mapa.html"><h2 class="items--titulos">Mapa</h2></a>
+                        </li>
+                        <li class="nav-item opcion-item">
+                            <a class="nav-link" href="../pages/Historia.html"><h2 class="items--titulos">Historia</h2></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <!-- fin header -->
@@ -176,5 +186,9 @@
         AOS.init();
     </script>
     <!-- fin AOS -->
+    <!-- SCRIPT de BOOSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- fin BOOTSTRAP -->
 </body>
 </html>

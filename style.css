@@ -30,42 +30,29 @@
 
 /* header */
 
-.header{
-    /* grid */
+header{
     grid-area: header;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1 ;
-    background: linear-gradient(180deg, rgba(253,93,93,0.950315160243785) 32%, rgba(255,128,128,0.8410714627647934) 86%, rgba(255,247,188,0) 100%);    
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
-/* logo box */
-.logo{
-    display: flex;
-    width: 100%;
-}
 /* concordia logo y nombre */
-.logo-a{
-    text-decoration: none;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding: 1% 0% 1% 5% ;
-}
-.logo--img{
-    display: inline-block;
-    width: 14%;
+
+.background-nav{
+    position: sticky;
+    background: linear-gradient(180deg, rgba(253,93,93,0.950315160243785) 32%, rgba(255,128,128,0.8410714627647934) 86%, rgba(255,247,188,0) 100%);
 }
 
-.logo--h1{
-    display: inline-block;
-    color: white;
+.logo--img{
+    display: flex;
+    width: 25%;
 }
-.logo--h1:hover{
+
+.logo--h2{
+    display: flex;
+    font-size: 150%;
+    color: white;
+    align-items: center;
+}
+.logo--h2:hover{
     color: #C0EDA6;
     transition: 1s;
 }
@@ -93,14 +80,16 @@
     padding-right: 5px;
     padding-left: 5px;
 }
-.header nav .menu .menu--items a{
-    text-decoration: NONE;
+.opcion-item{
+    color: white;
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.717);
 }
-.header nav .menu .menu--items a:hover{
+.opcion-item:hover{
     text-shadow: none;
+    transition: 1s;
+    color: #C0EDA6;
     transition: 1s;
 }
 
@@ -400,8 +389,8 @@ main{
 /* article festivales */
 .festivales{
     grid-area: festividades;
-    background-color: salmon;
-    width: 90%;
+    background-color: #FF8080;
+    width: 60%;
     margin: auto;
     padding: 1%;
     overflow: hidden;
@@ -415,50 +404,10 @@ main{
     font-size: 20px;
     text-align: center;
 }
-
-.carrusel li{
-    list-style: none;
+.tamaño-carrusel{
     width: 100%;
 }
 
-.img-carrusel{
-    width: 100%;
-}
-
-.carrusel{
-    display: flex;
-    padding: 0;
-    width: 450%;
-    animation: carrusel 50s linear infinite alternate;
-}
-
-@keyframes carrusel{
-    /*  */
-    0%{ margin-left: 0;}
-    10%{ margin-left: 0;}
-    /*  */
-    15%{ margin-left: -50;}
-    25%{ margin-left: -50;}
-    /*  */
-    30%{ margin-left: -100%;}
-    35%{ margin-left: -100%;}
-    /*  */
-    40%{ margin-left: -150%;}
-    50%{ margin-left: -150%;}
-
-    /*  */
-    55%{ margin-left: -200%;}
-    65%{ margin-left: -200%;}
-    /*  */
-    70%{ margin-left: -250%;}
-    80%{ margin-left: -250%;}
-    /*  */
-    85%{ margin-left: -300%;}
-    95%{ margin-left: -300%;}
-
-    96%{ margin-left: -350;}
-    100%{ margin-left: -350%;}
-}
 
 
 /* fin article festivales */
@@ -497,8 +446,6 @@ main{
 
 .footer--nom{
     display: inline-block;
-    width: 100%;
-    height: 100%;
     color: white;
     transition: 1s;
 
@@ -511,8 +458,7 @@ main{
 }
 .footer--frase{
     display: inline-block;
-    width: 100%;
-    height: 100%;
+    font-size: 100%;
     color: white;
     transition: 1s;
 
@@ -1014,6 +960,7 @@ main{
         width: 25%;
     }
     .festivales{
+        width: 100%;
         margin-bottom: 5%;
     }
 
@@ -1225,6 +1172,7 @@ main{
         width: 25%;
     }
     .festivales{
+        width: 90%;
         margin-bottom: 5%;
     }
 
