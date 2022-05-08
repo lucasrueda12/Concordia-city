@@ -788,8 +788,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2%;
     width: 100%;
+    padding: 2%;
 }
 /* img */
 .indicaciones-img{
@@ -807,10 +807,11 @@ main{
     padding: 1% 2% 1% 2%;
     text-align: center;
     background-color: #99C4C8;
-    color: black;
+    color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 150%;
 }
+
 
 /* -------------------------------------------------------------------------- */
 /*                                  fin mapa                                  */
@@ -1058,10 +1059,15 @@ main{
         flex-direction: column;
     }
     .indicaciones-img{
+        display: flex;
+        justify-content: center;
         width: 100%;
     }
     .indicaciones-txt{
         width: 100%;
+    }
+    .img-provincia{
+        width: 90%;
     }
 
     /* -------------------------------------------------------------------------- */
@@ -1272,10 +1278,15 @@ main{
         flex-direction: column;
     }
     .indicaciones-img{
+        display: flex;
+        justify-content: center;
         width: 100%;
     }
     .indicaciones-txt{
         width: 100%;
+    }
+    .img-provincia{
+        width: 90%;
     }
 
     /* -------------------------------------------------------------------------- */
@@ -1307,6 +1318,24 @@ main{
 /* -------------------------------------------------------------------------- */
 /*                                   desktop                                  */
 /* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 961px) and (max-width: 1400px) {
+    /* -------------------------------------------------------------------------- */
+    /*                                  Historia                                  */
+    /* -------------------------------------------------------------------------- */
+    .historia-part{
+        flex-direction: column;
+    }
+    .historia-txt{
+        width: 90%;
+    }
+    .historia-img{
+        padding-bottom: 5%;
+        width: 80%;
+    }
+    .img-catedral{
+        width: 60%;
+    }
+}
 
 @media only screen and (min-width: 961px) {
     /* -------------------------------------------------------------------------- */
