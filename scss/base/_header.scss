@@ -1,0 +1,53 @@
+@import '../components/listas';
+
+header{
+    .background-nav{
+        position: sticky;
+        background: nth($paleta-colores, 3 );
+        div{
+            a{
+                .logo--img{
+                    display: flex;
+                    width: 25%;
+                }
+                .logo--h2{
+                    display: flex;
+                    font-size: 150%;
+                    color: nth($color, 1 );
+                    align-items: center;
+                    &:hover{
+                        color: nth($paleta-colores, 2 );
+                        transition: 1s;
+                    }
+                }
+            }
+            div{
+                ul{
+                    .opcion-item{
+                        color: nth($color, 1 );;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.717);
+                        &:hover{
+                            text-shadow: none;
+                            transition: 1s;
+                            color: nth($paleta-colores, 2 );
+                            transition: 1s;
+                        }
+                        
+                    }
+                    li{
+                        a{
+                            .items--titulos{
+                                color: nth($color, 1 );;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+}
+/* Fin HEADER */
