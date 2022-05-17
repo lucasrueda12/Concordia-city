@@ -1,17 +1,20 @@
 @import '../components/listas';
+@import '../components/mapas';
 
 header{
+    position: map-get($header , position );
+    top: map-get($header , top );
+    z-index: map-get($header , z-index );;
     .background-nav{
-        position: sticky;
-        background: nth($paleta-colores, 3 );
-        div{
+        background: nth($paleta-colores, 3);
+        section{
             a{
                 .logo--img{
-                    display: flex;
+                    display: map-get($header , display );
                     width: 25%;
                 }
                 .logo--h2{
-                    display: flex;
+                    display: map-get($header , display );
                     font-size: 150%;
                     color: nth($color, 1 );
                     align-items: center;
@@ -21,7 +24,7 @@ header{
                     }
                 }
             }
-            div{
+            article{
                 ul{
                     .opcion-item{
                         color: nth($color, 1 );;

@@ -1,20 +1,24 @@
+@import '../components/listas';
+@import '../components/mapas';
+@import '../components/variables';
+
 .footer{
     margin-top: 1%;
     grid-area: footer;
-    display: flex;
+    display: map-get($footer , display );
     justify-content: space-between;
-    align-items: center;
-    background-color: #68A7AD;
+    align-items: map-get($footer , align-items );
+    background-color: nth($paleta-colores, 3);
     padding: 1%;
 
     /* logo y frase */
     .logo--container{
-        display: flex;
+        display: map-get($footer , display );
         justify-content: flex-start;
-        align-items: center;
+        align-items: map-get($footer , align-items );
         width: 33.3%;
         a{
-            display: flex;
+            display: map-get($footer , display );
             text-decoration: none;
             .footer--logo{
                 display: inline;
@@ -48,14 +52,14 @@
     }
     .redes-container{
         /* iconos de redes */
-        display: flex;
+        display: map-get($footer , display );
         width: 33.3%;
         justify-content: center;
-        align-items: center;
+        align-items: map-get($footer , align-items );
         .redes{
             display: inline-block;
             margin: 2%;
-            text-align: center;
+            text-align: map-get($footer , text-align );
             color: white;
             font-size: 200%;
             transition: 1s;

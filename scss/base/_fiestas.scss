@@ -55,14 +55,14 @@
                 display: flex;
                 flex-direction: column;
                 width: 40%;
-            }
-            .myc-img{
-                width: 100%;
-            }
-            .myc-txt{
-                color: black;
-                background-color: #99C4C8;
-                font-size: 150%;
+                .myc-img{
+                    width: 100%;
+                }
+                .myc-txt{
+                    color: black;
+                    background-color: #99C4C8;
+                    font-size: 150%;
+                }
             }
         }
     }
@@ -71,7 +71,6 @@
         display: flex;
         width: 100%;
         color: black;
-        /* background-color: #FF8080; */
         text-align: center;
         font-size: 100%;
         p{

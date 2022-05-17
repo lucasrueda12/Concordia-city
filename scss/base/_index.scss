@@ -1,13 +1,14 @@
 @import '../components/listas';
 @import '../components/variables';
+@import '../components/extend';
 /* Index main */
 /* main */
 
 /* seccion inicio pag */
 .seccion--inicio{ 
-    width: $w100;
+    width: $t100;
     .inicio{ /* foto principal y frase */
-        width: $w100;
+        width: $t100;
         height: 80vh;
         background: linear-gradient(rgba(0, 0, 0, 0.491), rgba(0, 0, 0, 0.5)), url(../src/img/costanera-2.jpg) ;
         background-position: $center;
@@ -24,38 +25,38 @@
         
         h1{
             text-align: $center;
-            font-size: 300%;
+            font-size: $f100*3;
             font-weight: bold;
         }
         p{
             text-align: $center;
-            font-size: 200%;
+            font-size: $f100*2;
         }
         /* fin foto principal y frase */
-    } 
+    }
 
     .presentacion{ /* por que visitarnos */
         background: nth($paleta-colores, 1 );
         margin-left: 1%;
         margin-right: 1%;
-        align-items: $center;
         padding: 2%;
         .presentacion--titulo{
             text-align: $center;
-            color: nth($color, 2 );
+            color: nth($color, 1 );
             font-weight: 700;
-            font-size: 200%;
+            font-size: $f100*2;
             padding: 2%;
-            .presentacion--texto{
-                display: inline-block;
-                text-align: $center;
-                color: nth($color, 2 );
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 100%;
-                font-weight: 100;
-                margin: 2% 10% 2% 10%;
-            }
         }
+        .presentacion--texto{
+            display: inline-block;
+            text-align: $center;
+            color: nth($color, 1 );
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: $f100;
+            font-weight: 100;
+            margin: 2% 10% 2% 10%;
+        }
+        
         /* fin por que visitarnos */
     } 
 }
@@ -76,21 +77,10 @@
         position: relative;
         grid-area: fot1;
         .entrada--img{
-            width: $w100;
-            height: $w100;
-            object-fit: cover;
+            @extend %img;
         }
         .entrada--tit{
-            position: absolute;
-            bottom: 0;
-            color: nth($color, 1 );
-            background-color: nth($paleta-colores, 1 );
-            width: $w100;
-            padding: 5px 0;
-            font-weight: 200;
-            font-family: 'Roboto', sans-serif;
-            font-size: 20px;
-            text-align: $center;
+            @extend %tit;
         }
         /* fin entrada playa */
     }
@@ -99,21 +89,10 @@
         position: relative;
         grid-area: fot2;
         .maria--img{
-            width: $w100;
-            height: $w100;
-            object-fit: cover;
+            @extend %img;
         }
         .maria--tit{
-            position: absolute;
-            bottom: 0;
-            color: nth($color, 1 );
-            background-color: nth($paleta-colores, 1 );
-            width: $w100;
-            padding: 5px 0;
-            font-weight: 200;
-            font-family: 'Roboto', sans-serif;
-            font-size: 20px;
-            text-align: $center;
+            @extend %tit;
         }
         /* fin playa maria */
     }  
@@ -122,21 +101,10 @@
         position: relative;
         grid-area: fot3;
         .barcoRio--img{
-            width: $w100;
-            height: $w100;
-            object-fit: cover;
+            @extend %img;
         }
         .barcoRio--tit{
-            position: absolute;
-            bottom: 0;
-            color: nth($color, 1 );
-            background-color: nth($paleta-colores, 1 );
-            width: $w100;
-            padding: 5px 0;
-            font-weight: 200;
-            font-family: 'Roboto', sans-serif;
-            font-size: 100%;
-            text-align: $center;
+            @extend %tit;
         }
         /* fin barco en rio */
     }
@@ -152,7 +120,7 @@
     grid-template-areas: 
                         "turismo carnavales"
                         "festividades festividades";
-    width: 100%;
+    width: $t100;
     .turismo{
     /* article Turismo */
         grid-area: turismo;
@@ -174,30 +142,24 @@
             position: relative;
             grid-area: t1;
             align-items: $center;
-            .turismo--sanCa{ /* imagen */
-                width: $w100;
-                height: $w100;
-                object-fit: cover;
+            .turismo--sanCa{
+                @extend %img;
             }
         }
         .represa-index{
             position: relative;
             grid-area: t2;
             align-items: $center;
-            .turismo--represa{ /* imagen */
-                width: $w100;
-                height: $w100;
-                object-fit: cover;
+            .turismo--represa{
+                @extend %img;
             }
         }
         .termas-index{
             position: relative;
             grid-area: t3;
             align-items: $center;
-            .turismo--termas{ /* imagen */
-                width: $w100;
-                height: $w100;
-                object-fit: cover;
+            .turismo--termas{
+                @extend %img;
             }
         }
         /* fin art turismo */
@@ -211,7 +173,7 @@
         color: nth($color, 2 );
         background-color: nth($paleta-colores, 2 );
         font-weight: 500;
-        font-size: 100%;
+        font-size: $f100;
         text-align: $center;
     }
 
@@ -228,9 +190,9 @@
         }
         .carnavales-1{
             position: relative;
-            width: $w100;
+            width: $t100;
             .carnavales--pasarella{
-                width: $w100;
+                width: $t100;
             }
             .carnavales-2{
                 margin: 1%;
@@ -243,7 +205,7 @@
                 .carnavales--carroza{
                     bottom: 2%;
                     right: 5%;
-                    width: $w100;
+                    width: $t100;
                 }
             }
             .carnavales-3{
@@ -257,7 +219,7 @@
                 box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
                 .carnavales--murga{
                     right: 30%;
-                    width: $w100;
+                    width: $t100;
                 }
             }
         }
@@ -277,11 +239,11 @@
             color: nth($color, 2 );
             background-color: nth($paleta-colores, 2 );
             font-weight: 500;
-            font-size: 100%;
+            font-size: $f100;
             text-align: $center;
         }
         .tamaño-carrusel{
-            width: 100%;
+            width: $t100;
         }
         /* fin article festivales */
     }

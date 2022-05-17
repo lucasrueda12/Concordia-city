@@ -1,0 +1,15 @@
+$header:(
+    top: 0,
+    z-index: 5,
+    position: sticky,
+    display: flex,
+);
+
+$footer:(
+    display: flex,
+    background-color: #68A7AD,
+    align-items: center,
+    text-align: center,
+    justify-content: center,
+    text-decoration: none,
+);

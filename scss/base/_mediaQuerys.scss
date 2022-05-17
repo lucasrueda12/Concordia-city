@@ -1,3 +1,5 @@
+@import '../components/mixins';
+
 /* -------------------------------------------------------------------------- */
 /*                                 responsive                                 */
 /* -------------------------------------------------------------------------- */
@@ -39,24 +41,26 @@
         margin-bottom: 1%;
         .carnavales{
             .carnavales-1{
-                padding: 5%;
+                padding: 1%;
+                .carnavales-3{
+                    width: 25%;
+                }
+                .carnavales-2{
+                    bottom: 0;
+                    right: 30%;
+                    width: 25%;
+                }
             }
-            .carnavales-3{
-                width: 25%;
-            }
-            .carnavales-2{
-                right: 30%;
-                width: 25%;
-            }
+            
         }
         .festivales{
-            width: 100%;
+            width: 95%;
             margin-bottom: 5%;
         }
     }
     .footer{
         padding: 3%;
-        flex-direction: column;
+        @include f-direction(column);
         .logo--container{
             width: 100%;
         }
@@ -77,7 +81,7 @@
     /* -------------------------------------------------------------------------- */
     .lugares{
         .t-secciones{
-            flex-direction: column;
+            @include f-direction(column);
             width: 100%;
             padding: 1%;
             .t-txt{
@@ -125,16 +129,24 @@
     
     .seccion-festividades{
         .p-titulo{
-            h2{
-                font-size: 40px;
+            .f-color-tit{
+                font-size: 200%;
+                text-align: center;
                 border-bottom: solid 1px #99C4C8;
             }
         }
         .f-festividades{
-            flex-direction: column;
+            @include f-direction(column);
             .fest-descripcion{
                 width: 100%;
                 padding: 3%;
+                &:hover{
+                    margin-top: 10%;
+                    .fest-txt{
+                        padding-left: 8%;
+                        padding-right: 8%;
+                    }
+                }
                 .fest-tit{
                     border-bottom: solid 1px #99C4C8;
                 }
@@ -157,10 +169,10 @@
         }
     }
     .indicaciones{
-        flex-direction: column;
+        @include f-direction(column);
         .indicaciones-img{
             display: flex;
-            justify-content: center;
+            @include justifi-aling(center, center);
             width: 100%;
             .img-provincia{
                 width: 90%;
@@ -175,13 +187,13 @@
     /* -------------------------------------------------------------------------- */
     .historia{
         .historia-art{
-            flex-direction: column;
+            @include f-direction(column);
             .historia-part{
                 width: 100%;
-                flex-direction: column;
+                @include f-direction(column);
                 padding: 5%;
                 .img-catedral{
-                    width: 90%;
+                    width: 70%;
                 }
                 .historia-img{
                     width: 90%;
@@ -226,7 +238,6 @@
                 "carnavales"
                 "festividades";
         margin-bottom: 1%;
-
         .carnavales{
             .carnavales-1{
                 padding: 5%;
@@ -248,7 +259,7 @@
 
     .footer{
         padding: 3%;
-        flex-direction: column;
+        @include f-direction(column);
         .logo--container{
             width: 100%;
         }
@@ -267,7 +278,7 @@
     /* -------------------------------------------------------------------------- */
     .lugares{
         .t-secciones{
-            flex-direction: column;
+            @include f-direction(column);
             width: 100%;
             position: static;
             padding: 1%;
@@ -305,10 +316,11 @@
             .murgaYcarroza{
                 margin-top: -2%;
                 position: static;
+                .myc{
+                    width: 50%;
+                }
             }
-            .myc{
-                width: 50%;
-            }
+            
         }
         .f-texto{
             font-size: 100%;
@@ -321,73 +333,74 @@
         } 
     }
     
-    .seccion-festividades 
-    .f-festividades{
-        flex-direction: column;
+    .seccion-festividades{
+        .f-festividades{
+            @include f-direction(column);
+            .fest-descripcion{
+                width: 100%;
+                padding: 3%;
+                .fest-tit{
+                    border-bottom: solid 1px #99C4C8;
+                }
+            }
+            .fest-img{
+                width: 100%;
+            }
+        }
     }
-    .fest-descripcion{
-        width: 100%;
-        padding: 3%;
-    }
-    .fest-tit{
-        border-bottom: solid 1px #99C4C8;
-    }
-    .fest-img{
-        width: 100%;
-    }
-
     /* -------------------------------------------------------------------------- */
     /*                                    Mapa                                    */
     /* -------------------------------------------------------------------------- */
     .mapa{
         width: 95%;
         margin: auto;
-    }
-    .mapa h1{
-        width: 95%;
-        font-size: 200%;
+        h1{
+            width: 95%;
+            font-size: 200%;
+        }
     }
     .indicaciones{
-        flex-direction: column;
+        @include f-direction(column);
+        .indicaciones-img{
+            display: flex;
+            @include justifi-aling(center, center);
+            width: 100%;
+            .img-provincia{
+                width: 90%;
+            }
+        }
+        .indicaciones-txt{
+            width: 100%;
+        }
     }
-    .indicaciones-img{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    .indicaciones-txt{
-        width: 100%;
-    }
-    .img-provincia{
-        width: 90%;
-    }
-
     /* -------------------------------------------------------------------------- */
     /*                                  Historia                                  */
     /* -------------------------------------------------------------------------- */
-    .historia-art{
-        flex-direction: column;
+    .historia{
+        .historia-art{
+            @include f-direction(column);
+            .historia-part{
+                width: 100%;
+                @include f-direction(column);
+                padding: 5%;
+                .img-catedral{
+                    width: 60%;
+                }
+                .historia-img{
+                    width: 90%;
+                }
+                .historia-txt{
+                    width: 90%;
+                }
+            }
+            .escarapela{
+                display: none;
+            }
+            
+        }
     }
-    .historia-part{
-        width: 100%;
-        flex-direction: column;
-        padding: 5%;
-    }
-    .img-catedral{
-        width: 90%;
-    }
-    .historia-img{
-        width: 90%;
-    }
-    .historia-txt{
-        width: 90%;
-    }
-    .escarapela{
-        display: none;
-    }
-
+    
 }
-
 /* -------------------------------------------------------------------------- */
 /*                                   desktop                                  */
 /* -------------------------------------------------------------------------- */
@@ -395,47 +408,53 @@
     /* -------------------------------------------------------------------------- */
     /*                                  Historia                                  */
     /* -------------------------------------------------------------------------- */
-    .historia-part{
-        flex-direction: column;
+    .historia{
+        .historia-art{
+            .historia-part{
+                @include f-direction(column);
+                .historia-txt{
+                    width: 90%;
+                }
+                .historia-img{
+                    padding-bottom: 5%;
+                    width: 80%;
+                }
+                .img-catedral{
+                    width: 60%;
+                }
+            }
+            
+        }
     }
-    .historia-txt{
-        width: 90%;
-    }
-    .historia-img{
-        padding-bottom: 5%;
-        width: 80%;
-    }
-    .img-catedral{
-        width: 60%;
-    }
+    
 }
 
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1400px) {
     /* -------------------------------------------------------------------------- */
     /*                                   turismo                                  */
     /* -------------------------------------------------------------------------- */
-    .t-secciones,.t-secciones-2{
-        position: static;
+    .lugares{
+        .t-secciones{
+            @include justifi-aling(none, center);
+            .t-txt{
+                width: 50%;
+            }
+        }
     }
-    
-    .t-txt,.t-txt-2{
-        position: static;
-        width: 50%;
-    }
-
     /* -------------------------------------------------------------------------- */
     /*                                   Fiestas                                  */
     /* -------------------------------------------------------------------------- */
-    .f-texto{
-        font-size: 100%;
-        justify-content: start;
-        align-items: flex-start;
+    .seccion-carnaval{
+        .f-texto{
+            font-size: 100%;
+            @include justifi-aling(start, flex-start);
+            p{
+                padding: 5%;
+                background-color: #99C4C8;
+            }
+        }
     }
-    .f-texto p{
-        padding: 5%;
-        background-color: #99C4C8;
-    }
-    /* -------------------------------------------------------------------------- */
-    /*                                  Historia                                  */
-    /* -------------------------------------------------------------------------- */
 }
+/* -------------------------------------------------------------------------- */
+/*                               Fin Responsive                               */
+/* -------------------------------------------------------------------------- */

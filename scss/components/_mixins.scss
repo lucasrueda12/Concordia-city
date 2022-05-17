@@ -1,0 +1,7 @@
+@mixin justifi-aling($just-cont, $aling){
+    justify-content: $just-cont;
+    align-items: $aling;
+}
+@mixin f-direction($row-Column){
+    flex-direction: $row-Column;
+}

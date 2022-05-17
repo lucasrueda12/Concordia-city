@@ -3,10 +3,13 @@
 /* -------------------------------------------------------------------------- */
 /*                              ESTILOS GENERALES                             */
 /* -------------------------------------------------------------------------- */
-/* Estilos generales */
+/* letra */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+/* reset */
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .layout {
@@ -32,37 +35,41 @@ footer {
 /* -------------------------------------------------------------------------- */
 /*                                   HEADER                                   */
 /* -------------------------------------------------------------------------- */
-header .background-nav {
+header {
   position: sticky;
+  top: 0;
+  z-index: 5;
+}
+header .background-nav {
   background: #68A7AD;
 }
-header .background-nav div a .logo--img {
+header .background-nav section a .logo--img {
   display: flex;
   width: 25%;
 }
-header .background-nav div a .logo--h2 {
+header .background-nav section a .logo--h2 {
   display: flex;
   font-size: 150%;
   color: white;
   align-items: center;
 }
-header .background-nav div a .logo--h2:hover {
+header .background-nav section a .logo--h2:hover {
   color: #EEE4AB;
   transition: 1s;
 }
-header .background-nav div div ul .opcion-item {
+header .background-nav section article ul .opcion-item {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.717);
 }
-header .background-nav div div ul .opcion-item:hover {
+header .background-nav section article ul .opcion-item:hover {
   text-shadow: none;
   transition: 1s;
   color: #EEE4AB;
   transition: 1s;
 }
-header .background-nav div div ul li a .items--titulos {
+header .background-nav section article ul li a .items--titulos {
   color: white;
 }
 
@@ -70,6 +77,25 @@ header .background-nav div div ul li a .items--titulos {
 /* -------------------------------------------------------------------------- */
 /*                                    INDEX                                   */
 /* -------------------------------------------------------------------------- */
+.playa .playa--barcoRio .barcoRio--tit, .playa .playa--maria .maria--tit, .playa .playa--entrada .entrada--tit {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: #99C4C8;
+  width: 100%;
+  padding: 1%;
+  font-weight: 200;
+  font-family: "Roboto", sans-serif;
+  font-size: 120%;
+  text-align: center;
+}
+
+.interes .turismo .termas-index .turismo--termas, .interes .turismo .represa-index .turismo--represa, .interes .turismo .sanca-index .turismo--sanCa, .playa .playa--barcoRio .barcoRio--img, .playa .playa--maria .maria--img, .playa .playa--entrada .entrada--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Index main */
 /* main */
 /* seccion inicio pag */
@@ -108,21 +134,20 @@ header .background-nav div div ul li a .items--titulos {
   background: #99C4C8;
   margin-left: 1%;
   margin-right: 1%;
-  align-items: center;
   padding: 2%;
   /* fin por que visitarnos */
 }
 .seccion--inicio .presentacion .presentacion--titulo {
   text-align: center;
-  color: black;
+  color: white;
   font-weight: 700;
   font-size: 200%;
   padding: 2%;
 }
-.seccion--inicio .presentacion .presentacion--titulo .presentacion--texto {
+.seccion--inicio .presentacion .presentacion--texto {
   display: inline-block;
   text-align: center;
-  color: black;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
   font-weight: 100;
@@ -145,45 +170,11 @@ header .background-nav div div ul li a .items--titulos {
   grid-area: fot1;
   /* fin entrada playa */
 }
-.playa .playa--entrada .entrada--img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.playa .playa--entrada .entrada--tit {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  background-color: #99C4C8;
-  width: 100%;
-  padding: 5px 0;
-  font-weight: 200;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
 .playa .playa--maria {
   /* playa maria */
   position: relative;
   grid-area: fot2;
   /* fin playa maria */
-}
-.playa .playa--maria .maria--img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.playa .playa--maria .maria--tit {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  background-color: #99C4C8;
-  width: 100%;
-  padding: 5px 0;
-  font-weight: 200;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  text-align: center;
 }
 .playa .playa--barcoRio {
   /* barco en rio */
@@ -191,24 +182,6 @@ header .background-nav div div ul li a .items--titulos {
   grid-area: fot3;
   /* fin barco en rio */
 }
-.playa .playa--barcoRio .barcoRio--img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.playa .playa--barcoRio .barcoRio--tit {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  background-color: #99C4C8;
-  width: 100%;
-  padding: 5px 0;
-  font-weight: 200;
-  font-family: "Roboto", sans-serif;
-  font-size: 100%;
-  text-align: center;
-}
-
 /* fin playas de concordia */
 /* interes */
 .interes {
@@ -240,33 +213,15 @@ header .background-nav div div ul li a .items--titulos {
   grid-area: t1;
   align-items: center;
 }
-.interes .turismo .sanca-index .turismo--sanCa {
-  /* imagen */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .interes .turismo .represa-index {
   position: relative;
   grid-area: t2;
   align-items: center;
 }
-.interes .turismo .represa-index .turismo--represa {
-  /* imagen */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .interes .turismo .termas-index {
   position: relative;
   grid-area: t3;
   align-items: center;
-}
-.interes .turismo .termas-index .turismo--termas {
-  /* imagen */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .interes .interes--titulo {
   /* titulos */
@@ -490,10 +445,10 @@ header .background-nav div div ul li a .items--titulos {
   flex-direction: column;
   width: 40%;
 }
-.seccion-carnaval .pasarella .murgaYcarroza .myc-img {
+.seccion-carnaval .pasarella .murgaYcarroza .myc .myc-img {
   width: 100%;
 }
-.seccion-carnaval .pasarella .murgaYcarroza .myc-txt {
+.seccion-carnaval .pasarella .murgaYcarroza .myc .myc-txt {
   color: black;
   background-color: #99C4C8;
   font-size: 150%;
@@ -503,7 +458,6 @@ header .background-nav div div ul li a .items--titulos {
   display: flex;
   width: 100%;
   color: black;
-  /* background-color: #FF8080; */
   text-align: center;
   font-size: 100%;
 }
@@ -801,17 +755,18 @@ header .background-nav div div ul li a .items--titulos {
     margin-bottom: 1%;
   }
   .interes .carnavales .carnavales-1 {
-    padding: 5%;
+    padding: 1%;
   }
-  .interes .carnavales .carnavales-3 {
+  .interes .carnavales .carnavales-1 .carnavales-3 {
     width: 25%;
   }
-  .interes .carnavales .carnavales-2 {
+  .interes .carnavales .carnavales-1 .carnavales-2 {
+    bottom: 0;
     right: 30%;
     width: 25%;
   }
   .interes .festivales {
-    width: 100%;
+    width: 95%;
     margin-bottom: 5%;
   }
 
@@ -876,8 +831,9 @@ header .background-nav div div ul li a .items--titulos {
     font-size: 100%;
   }
 
-  .seccion-festividades .p-titulo h2 {
-    font-size: 40px;
+  .seccion-festividades .p-titulo .f-color-tit {
+    font-size: 200%;
+    text-align: center;
     border-bottom: solid 1px #99C4C8;
   }
   .seccion-festividades .f-festividades {
@@ -886,6 +842,13 @@ header .background-nav div div ul li a .items--titulos {
   .seccion-festividades .f-festividades .fest-descripcion {
     width: 100%;
     padding: 3%;
+  }
+  .seccion-festividades .f-festividades .fest-descripcion:hover {
+    margin-top: 10%;
+  }
+  .seccion-festividades .f-festividades .fest-descripcion:hover .fest-txt {
+    padding-left: 8%;
+    padding-right: 8%;
   }
   .seccion-festividades .f-festividades .fest-descripcion .fest-tit {
     border-bottom: solid 1px #99C4C8;
@@ -912,6 +875,7 @@ header .background-nav div div ul li a .items--titulos {
   .indicaciones .indicaciones-img {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
   }
   .indicaciones .indicaciones-img .img-provincia {
@@ -933,7 +897,7 @@ header .background-nav div div ul li a .items--titulos {
     padding: 5%;
   }
   .historia .historia-art .historia-part .img-catedral {
-    width: 90%;
+    width: 70%;
   }
   .historia .historia-art .historia-part .historia-img {
     width: 90%;
@@ -1038,7 +1002,7 @@ header .background-nav div div ul li a .items--titulos {
     margin-top: -2%;
     position: static;
   }
-  .seccion-carnaval .pasarella .myc {
+  .seccion-carnaval .pasarella .murgaYcarroza .myc {
     width: 50%;
   }
   .seccion-carnaval .f-texto {
@@ -1052,17 +1016,14 @@ header .background-nav div div ul li a .items--titulos {
   .seccion-festividades .f-festividades {
     flex-direction: column;
   }
-
-  .fest-descripcion {
+  .seccion-festividades .f-festividades .fest-descripcion {
     width: 100%;
     padding: 3%;
   }
-
-  .fest-tit {
+  .seccion-festividades .f-festividades .fest-descripcion .fest-tit {
     border-bottom: solid 1px #99C4C8;
   }
-
-  .fest-img {
+  .seccion-festividades .f-festividades .fest-img {
     width: 100%;
   }
 
@@ -1073,7 +1034,6 @@ header .background-nav div div ul li a .items--titulos {
     width: 95%;
     margin: auto;
   }
-
   .mapa h1 {
     width: 95%;
     font-size: 200%;
@@ -1082,47 +1042,40 @@ header .background-nav div div ul li a .items--titulos {
   .indicaciones {
     flex-direction: column;
   }
-
-  .indicaciones-img {
+  .indicaciones .indicaciones-img {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
   }
-
-  .indicaciones-txt {
-    width: 100%;
-  }
-
-  .img-provincia {
+  .indicaciones .indicaciones-img .img-provincia {
     width: 90%;
+  }
+  .indicaciones .indicaciones-txt {
+    width: 100%;
   }
 
   /* -------------------------------------------------------------------------- */
   /*                                  Historia                                  */
   /* -------------------------------------------------------------------------- */
-  .historia-art {
+  .historia .historia-art {
     flex-direction: column;
   }
-
-  .historia-part {
+  .historia .historia-art .historia-part {
     width: 100%;
     flex-direction: column;
     padding: 5%;
   }
-
-  .img-catedral {
+  .historia .historia-art .historia-part .img-catedral {
+    width: 60%;
+  }
+  .historia .historia-art .historia-part .historia-img {
     width: 90%;
   }
-
-  .historia-img {
+  .historia .historia-art .historia-part .historia-txt {
     width: 90%;
   }
-
-  .historia-txt {
-    width: 90%;
-  }
-
-  .escarapela {
+  .historia .historia-art .escarapela {
     display: none;
   }
 }
@@ -1133,54 +1086,48 @@ header .background-nav div div ul li a .items--titulos {
   /* -------------------------------------------------------------------------- */
   /*                                  Historia                                  */
   /* -------------------------------------------------------------------------- */
-  .historia-part {
+  .historia .historia-art .historia-part {
     flex-direction: column;
   }
-
-  .historia-txt {
+  .historia .historia-art .historia-part .historia-txt {
     width: 90%;
   }
-
-  .historia-img {
+  .historia .historia-art .historia-part .historia-img {
     padding-bottom: 5%;
     width: 80%;
   }
-
-  .img-catedral {
+  .historia .historia-art .historia-part .img-catedral {
     width: 60%;
   }
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1400px) {
   /* -------------------------------------------------------------------------- */
   /*                                   turismo                                  */
   /* -------------------------------------------------------------------------- */
-  .t-secciones, .t-secciones-2 {
-    position: static;
+  .lugares .t-secciones {
+    justify-content: none;
+    align-items: center;
   }
-
-  .t-txt, .t-txt-2 {
-    position: static;
+  .lugares .t-secciones .t-txt {
     width: 50%;
   }
 
   /* -------------------------------------------------------------------------- */
   /*                                   Fiestas                                  */
   /* -------------------------------------------------------------------------- */
-  .f-texto {
+  .seccion-carnaval .f-texto {
     font-size: 100%;
     justify-content: start;
     align-items: flex-start;
   }
-
-  .f-texto p {
+  .seccion-carnaval .f-texto p {
     padding: 5%;
     background-color: #99C4C8;
   }
-
-  /* -------------------------------------------------------------------------- */
-  /*                                  Historia                                  */
-  /* -------------------------------------------------------------------------- */
 }
+/* -------------------------------------------------------------------------- */
+/*                               Fin Responsive                               */
+/* -------------------------------------------------------------------------- */
 /* Fin anidamiento de archivos en el style */
 
 /*# sourceMappingURL=style.css.map */
