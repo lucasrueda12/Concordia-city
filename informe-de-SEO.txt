@@ -1,0 +1,7 @@
+Bueno para Seo le aplique metas en el head de todas las paginas de mi sitio web, coloque open graph para que se visualice de forma mas intuitiva cuando se comparta en redes sociales o chats,
+tambien realize modificaciones pertinentes en los encabezados para que solo exista un solo h1 en cada pagina y tambien hice la casacada de encabezados(de h2 a h6) para correguir la semantica de la pagina
+ y por ultimo agregue alt descriptivos de las fotografias y tittle al iframe del mapa de google, a los iconos de las redes sociales y a la fotografia que esta como background en el css.
+
+Para sass aplique los mixin en el partial de mediaQueries, mapas aplique en el header y en el footer y por ultimo,extends en el index. 
+
+
