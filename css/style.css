@@ -97,6 +97,10 @@ header .background-nav section article ul li a .items--titulos {
   object-fit: cover;
 }
 
+.historia .historia-art .escarapela, .historia .historia-art .historia-part .historia-txt, .historia .historia-art .historia-part .historia-img, .seccion--inicio .presentacion .presentacion--texto {
+  display: inline-block;
+}
+
 /* Index main */
 /* main */
 /* seccion inicio pag */
@@ -146,7 +150,6 @@ header .background-nav section article ul li a .items--titulos {
   padding: 2%;
 }
 .seccion--inicio .presentacion .presentacion--texto {
-  display: inline-block;
   text-align: center;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -322,14 +325,12 @@ header .background-nav section article ul li a .items--titulos {
   margin: auto;
   color: white;
   font-size: 400%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .t-lugares .t-texto {
   display: flex;
   color: white;
   margin: 2% 20% 2% 20%;
   font-size: 100%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .t-lugares .t-texto p {
   text-align: justify;
@@ -366,6 +367,7 @@ header .background-nav section article ul li a .items--titulos {
   flex-direction: column;
   width: 50%;
   text-align: center;
+  justify-content: none;
   align-items: center;
   color: white;
   margin: auto;
@@ -392,8 +394,8 @@ header .background-nav section article ul li a .items--titulos {
   /*  */
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   color: white;
 }
 .fiestas--titulo h1 {
@@ -430,7 +432,8 @@ header .background-nav section article ul li a .items--titulos {
 .seccion-carnaval .pasarella .murgaYcarroza {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: none;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -472,6 +475,7 @@ header .background-nav section article ul li a .items--titulos {
 .seccion-festividades .p-titulo {
   display: flex;
   justify-content: center;
+  align-items: none;
   background-color: #99C4C8;
 }
 .seccion-festividades .p-titulo .f-color-tit {
@@ -522,7 +526,7 @@ header .background-nav section article ul li a .items--titulos {
   height: 50vh;
 }
 .mapa .p-tit {
-  color: white;
+  color: black;
   font-size: 300%;
   text-align: center;
 }
@@ -550,7 +554,6 @@ header .background-nav section article ul li a .items--titulos {
   text-align: center;
   background-color: #99C4C8;
   color: white;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 150%;
 }
 
@@ -559,13 +562,37 @@ header .background-nav section article ul li a .items--titulos {
 /* -------------------------------------------------------------------------- */
 /*                                  HISTORIA                                  */
 /* -------------------------------------------------------------------------- */
+.playa .playa--entrada .entrada--tit, .playa .playa--maria .maria--tit, .playa .playa--barcoRio .barcoRio--tit {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: #99C4C8;
+  width: 100%;
+  padding: 1%;
+  font-weight: 200;
+  font-family: "Roboto", sans-serif;
+  font-size: 120%;
+  text-align: center;
+}
+
+.playa .playa--entrada .entrada--img, .playa .playa--maria .maria--img, .playa .playa--barcoRio .barcoRio--img, .interes .turismo .sanca-index .turismo--sanCa, .interes .turismo .represa-index .turismo--represa, .interes .turismo .termas-index .turismo--termas, .interes .carnavales .carnavales-1 .carnavales--pasarella, .interes .carnavales .carnavales-1 .carnavales-2 .carnavales--carroza, .interes .carnavales .carnavales-1 .carnavales-3 .carnavales--murga {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.historia .historia-art .escarapela, .historia .historia-art .historia-part .historia-txt, .historia .historia-art .historia-part .historia-img, .seccion--inicio .presentacion .presentacion--texto {
+  display: inline-block;
+}
+
 /* bandera */
 .bandera {
   display: flex;
   justify-content: center;
+  align-items: none;
   position: relative;
   width: 100%;
-  color: #fff;
+  color: white;
 }
 .bandera h1 {
   position: absolute;
@@ -611,12 +638,10 @@ header .background-nav section article ul li a .items--titulos {
   padding: 2%;
 }
 .historia .historia-art .historia-part .historia-img {
-  display: inline-block;
   width: 50%;
   padding: 2%;
 }
 .historia .historia-art .historia-part .historia-txt {
-  display: inline-block;
   width: 40%;
   padding: 3% 2% 3% 2%;
   text-align: center;
@@ -624,7 +649,6 @@ header .background-nav section article ul li a .items--titulos {
 }
 .historia .historia-art .escarapela {
   /* escarapela */
-  display: inline-block;
   position: absolute;
   z-index: 1;
   top: -45%;

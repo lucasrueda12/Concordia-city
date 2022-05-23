@@ -1,30 +1,33 @@
+@import '../components/mixins';
+@import '../components/variables';
+@import '../components/listas';
+
+
+
 /* presentacion */
 .t-lugares{
-    background-color: #99C4C8;
+    background-color: nth($paleta-colores , 1 );
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    @include f-direction(column);
+    width: $t100;
     padding: 1%;
     
     .p-titulo{
         display: flex;
-        width: 100%;
+        width: $t100;
         margin: auto;
         .p-tit{
-            text-align: center;
+            text-align: $center;
             margin: auto;
-            color: white;
-            font-size: 400%;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            
+            color: nth($color , 1 );
+            font-size: $f100*4;
         }
     }
     .t-texto{
         display: flex;
-        color: white;
+        color: nth($color , 1 );
         margin: 2% 20% 2% 20%;
-        font-size: 100%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: $f100;
         p{
             text-align: justify;
         }
@@ -38,14 +41,14 @@
     grid-template-rows: repeat(4, auto);;
     .t-secciones{
         display: flex;
-        flex-direction: row;
-        width: 100%;
+        @include f-direction(row);
+        width: $t100;
         .t-img{
             /* imagenes */
-            width: 50%;
+            width: $t100*0.5;
             overflow: hidden;
             .t-imgenes{
-                width: 100%;
+                width: $t100;
                 transition: 0.5s;
                 object-fit: cover;
                 &:hover{
@@ -57,16 +60,16 @@
         .t-txt{
             /* textos de las imagenes */
             display: flex;
-            flex-direction: column;
-            width: 50%;
-            text-align: center;
-            align-items: center;
-            color: white;
+            @include f-direction(column);
+            width: $t100*0.5;
+            text-align: $center;
+            @include justifi-aling(none, $center);
+            color: nth($color , 1 );
             margin: auto;
             p{
-                width: 100%;
-                font-size: 120%;
-                background-color: #99C4C8;
+                width: $t100;
+                font-size: $f100*1.2;
+                background-color: nth($paleta-colores , 1 );
                 padding: 1%;
                 margin: 0%;
             }

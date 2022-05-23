@@ -1,18 +1,22 @@
+@import '../components/mixins';
+@import '../components/variables';
+@import '../components/listas';
+@import '../components/extend';
 /* bandera */
 .bandera{
     display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    color: #fff;
+    @include justifi-aling(center, none);
+    @include pos(relative);
+    width: $t100;
+    color: nth($color , 1 );
     h1{
-        position: absolute;
-        font-size: 400%;
-        font-weight: bold;
+        @include pos(absolute);
+        font-size: $f100*4;
+        font-weight: $fbolt;
         text-shadow: rgba(0, 0, 0, 0.518);
     }
     .bandera-img{
-        width: 100%;
+        width: $t100;
     }
 }
 
@@ -22,7 +26,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    width: 100%;
+    width: $t100;
     background: rgb(224,0,26);
     background: linear-gradient(0deg, rgba(224,0,26,1) 25%, rgba(2,84,46,1) 75%);
     margin-top: -4%;
@@ -30,46 +34,45 @@
     .historia-art{
         /* articulos de Historia */
         display: flex;
-        width: 100%;
-        position: relative;
+        width: $t100;
+        @include pos(relative);
         .historia-part{
             /* obalos Historia  */
             display: flex;
-            justify-content: center;
-            align-items: center;
+            @include justifi-aling(center, center);
             border-radius: 20%;
-            background-color: #99C4C8;
-            width: 50%;
+            background-color: nth($paleta-colores , 1 );
+            width: $t100 * 0.5;
             text-align: center;
             z-index: 2;
             .img-catedral{
-                width: 30%;
+                width: $t100*0.3;
                 padding: 2%;
             }
             .historia-img{
-                display: inline-block;
-                width: 50%;
+                @extend %dinblock;
+                width: $t100 * 0.5;
                 padding: 2%;
             
             }
             .historia-txt{
-                display: inline-block;
-                width: 40%;
+                @extend %dinblock;
+                width: $t100 * 0.4;
                 padding: 3% 2% 3% 2%;
                 text-align: center;
-                color: black;
+                color: nth($color , 2 );
             }
         }
         .escarapela{
             /* escarapela */
-            display: inline-block;
-            position: absolute;
+            @extend %dinblock;
+            @include pos(absolute);
             z-index: 1;
             top: -45%;
             left: 40.5%;
             width: 19%;
             .escarapela-img{
-                width: 100%;
+                width: $t100;
             }
         }
     }

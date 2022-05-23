@@ -1,20 +1,23 @@
+@import '../components/variables';
+@import '../components/mixins';
+@import '../components/listas';
+
 .fiestas--titulo{
-    width: 100%;
+    width: $t100;
     height: 20vh;
     background: linear-gradient(rgba(0, 0, 0, 0.491), rgba(0, 0, 0, 0.5)), url(../src/img/98.webp) ;
-    background-position: center;
+    background-position: $center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     /*  */
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+    @include justifi-aling($center, $center);
+    @include f-direction(column);
+    color: nth($color , 1 );
     h1{
-        font-size: 250%;
-        font-weight: bold;
+        font-size: $f100*2.5;
+        font-weight: $fbolt;
     }
 }
 
@@ -24,44 +27,44 @@
     grid-template-columns: repeat(3,1fr);
     grid-template-areas: 
             "pasarella pasarella ftexto";
-    width: 100%;
+    width: $f100;
     margin-top: 5px;
     margin-bottom: 5px;
     .pasarella{
         grid-area: pasarella;
         display: flex;
-        flex-direction: column;
-        position: relative;
+        @include f-direction(column);
+        @include pos(relative);
         width: 100%;
         text-align: center;
         .f-pasarella_tit{
-            background-color: #99C4C8;
-            color: black;
+            background-color: nth($paleta-colores , 1 );
+            color: nth($color , 2 );
             font-size: 150%;
-            font-weight: bold;
+            font-weight: $fbolt;
         }
         .f-pasarella_img{
-            width: 100%;
+            width: $t100;
         }
         .murgaYcarroza{
             display: flex;    
-            flex-direction: row;
-            justify-content: space-around;
-            width: 100%;
-            position: absolute;
+            @include f-direction(row);
+            @include justifi-aling(center, none);
+            width: $t100;
+            @include pos(absolute);
             bottom: 0;
             margin-top: -20%;
             .myc{
                 display: flex;
-                flex-direction: column;
-                width: 40%;
+                @include f-direction(column);
+                width: $t100*0.4;
                 .myc-img{
-                    width: 100%;
+                    width: $t100;
                 }
                 .myc-txt{
-                    color: black;
-                    background-color: #99C4C8;
-                    font-size: 150%;
+                    color: nth($color , 2 );
+                    background-color: nth($paleta-colores , 1 );
+                    font-size: $f100*1.5;
                 }
             }
         }
@@ -69,12 +72,12 @@
     .f-texto{
         grid-area: ftexto;
         display: flex;
-        width: 100%;
-        color: black;
+        width: $t100;
+        color: nth($color , 2 );
         text-align: center;
-        font-size: 100%;
+        font-size: $f100;
         p{
-            background-color: #99C4C8;
+            background-color: nth($paleta-colores , 1 );
         }
     }
     
@@ -85,46 +88,45 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
-    width: 100%;
+    width: $t100;
     margin-top: 2%;
     .p-titulo{
         display: flex;
-        justify-content: center ;
-        background-color: #99C4C8;
+        @include justifi-aling(center, none);
+        background-color: nth($paleta-colores , 1 );
         .f-color-tit{
-            font-size: 300%;
-            color: black;
+            font-size: $f100*3;
+            color: nth($color , 2 );
         }
     }
     .f-festividades{
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
+        @include justifi-aling(space-around, center);
+        width: $t100;
         margin-top: 2%;
         .fest-descripcion{
-            width: 40%;
+            width: $t100*0.4;
             text-align: center;
             transition: 0.5s;
             &:hover{
                 transition: 0.5s;
-                background-color: #99C4C8;
+                background-color: nth($paleta-colores , 1 );
                 transform: scale(1.2);
             
             }
             .fest-tit{
-                color: black;
-                font-size: 200%;
+                color: nth($color , 2 );
+                font-size: $f100*2;
             }
             .fest-txt{
-                color: black;
-                font-size: 110%;
+                color: nth($color , 2 );
+                font-size: $f100*1.1;
             }
         }
         .fest-img{
-            width: 40%;
+            width: $t100*0.4;
             .fest-img_tamaño{
-                width: 100%;
+                width: $t100;
             }
         }
     }

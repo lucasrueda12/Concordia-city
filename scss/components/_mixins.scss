@@ -5,3 +5,6 @@
 @mixin f-direction($row-Column){
     flex-direction: $row-Column;
 }
+@mixin pos($position) {
+    position: $position;
+}

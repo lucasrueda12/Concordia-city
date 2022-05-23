@@ -48,7 +48,7 @@
             padding: 2%;
         }
         .presentacion--texto{
-            display: inline-block;
+            @extend %dinblock;
             text-align: $center;
             color: nth($color, 1 );
             font-family: Arial, Helvetica, sans-serif;
