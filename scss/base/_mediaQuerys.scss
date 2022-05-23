@@ -12,6 +12,17 @@
     /* -------------------------------------------------------------------------- */
     /*                             index, header and footer                       */
     /* -------------------------------------------------------------------------- */
+    header{
+        .background-nav{
+            section{
+                a{
+                    .logo--h2{
+                        font-size: 100%;
+                    }
+                }
+            }
+        }
+    }
     .seccion--inicio{
         .inicio{
             h1{
@@ -70,7 +81,9 @@
         }
 
         .padre_derchautor{
-            text-align: end;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             width: 100%;
         }
     }
@@ -220,6 +233,16 @@
     /* -------------------------------------------------------------------------- */
     /*                           index, header y footer                           */
     /* -------------------------------------------------------------------------- */
+    .seccion--inicio{
+        .inicio{
+            h1{
+                font-size: 200%;
+            }
+            p{
+                font-size: 100%;
+            }
+        }
+    }
     .playa{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
@@ -240,14 +263,14 @@
         margin-bottom: 1%;
         .carnavales{
             .carnavales-1{
-                padding: 5%;
-            }
-            .carnavales-3{
-                width: 25%;
-            }
-            .carnavales-2{
-                right: 30%;
-                width: 25%;
+                .carnavales-3{
+                    width: 25%;
+                }
+                .carnavales-2{
+                    right: 30%;
+                    bottom: 0%;
+                    width: 25%;
+                }
             }
         }
         .festivales{
@@ -267,6 +290,9 @@
             width: 100%;
         }
         .padre_derchautor{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
             width: 100%;
         }
     }

@@ -12,6 +12,7 @@ header{
                 .logo--img{
                     display: map-get($header , display );
                     width: 25%;
+                    height: auto;
                 }
                 .logo--h2{
                     display: map-get($header , display );
