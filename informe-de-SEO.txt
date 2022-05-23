@@ -3,5 +3,7 @@ tambien realize modificaciones pertinentes en los encabezados para que solo exis
  y por ultimo agregue alt descriptivos de las fotografias y tittle al iframe del mapa de google, a los iconos de las redes sociales y a la fotografia que esta como background en el css.
 
 Para sass aplique los mixin en el partial de mediaQueries, mapas aplique en el header y en el footer y por ultimo,extends en el index. 
+Termine por aplicar mixins variables, extend y lista a todas las paginas del sitio web. con respecto a lighthouse no termino de entender lo que desea el programa, 
+aplique imagenes responsivas al index pero la calificacion de la pagina no subio.
 
 
